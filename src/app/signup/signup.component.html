@@ -1,0 +1,128 @@
+<div class="super_container">
+	
+	<!-- Home -->
+	<div class="home">
+		<!-- Image by: https://unsplash.com/@breather -->
+		<div class="home_background" style="background-image:url(./assets/images/contact.jpg)"></div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_title">
+							<h2>Sign Up</h2>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  <!-- header -->
+<app-header></app-header>
+
+<!-- Contact -->
+
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 contact_col">
+        <div class="estate_contact_form">
+              <div class="contact_title">Sign Up</div>
+              <div class="estate_contact_form_container"></div>
+              <form [formGroup]="myform" (ngSubmit)="submitForm()" id="estate_contact_form" class="estate_contact_form" action="post"> 
+                Name:
+                <input type="text"  name="name" formControlName="name" id="estate_contact_form_name" class="estate_input_field estate_contact_form_name"  placeholder="Enter name" >
+              
+                <span *ngIf="myform.get('name').hasError('required') && isSubmitted" >This field is required</span><br>
+                <span *ngIf="myform.get('name').hasError('pattern') && isSubmitted">Invalid name</span><br>
+                
+              
+                Email:
+                <input type="text" name="email" formControlName="email" id="estate_contact_form_email" class="estate_input_field estate_contact_form_email"  placeholder="Enter e-mail">
+              
+                <span *ngIf="myform.get('email').hasError('required') && isSubmitted">This field is required </span><br>
+                <span *ngIf="myform.get('email').hasError('email') && isSubmitted">Invalid E-mail</span><br>
+                
+              
+                Password:
+                <input type="password" name="Password" formControlName="password" id="estate_contact_form_password" class="estate_input_field estate_contact_form_password"  placeholder="Enter password">
+                
+                <span *ngIf="myform.get('password').hasError('required') && isSubmitted">This field is required</span><br>
+                <span *ngIf="myform.get('password').hasError('password') && isSubmitted">Invalid Password</span><br>
+              
+                Confirm Password:
+                <input type="password" name="Password" formControlName="password" id="estate_contact_form_password" class="estate_input_field estate_contact_form_password"  placeholder="Re-enter password">
+                
+                <span *ngIf="myform.get('password').hasError('required') && isSubmitted">This field is required</span><br>
+                <span *ngIf="myform.get('password').hasError('password') && isSubmitted">Please comfirm your Password</span><br>
+              
+              
+                <input type="submit"   name="submit" value="submit" id="estate_contact_send_btn"  class="estate_contact_send_btn trans_200">
+              </form>
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 contact_col">
+        <div class="contact_title">contact info</div>
+        <ul class="contact_info_list estate_contact">
+          <li class="contact_info_item d-flex flex-row">
+            <div><div class="contact_info_icon"><img src="./assets/images/placeholder.svg" alt=""></div></div>
+            <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+          </li>
+          <li class="contact_info_item d-flex flex-row">
+            <div><div class="contact_info_icon"><img src="./assets/images/phone-call.svg" alt=""></div></div>
+            <div class="contact_info_text">2556-808-8613</div>
+          </li>
+          <li class="contact_info_item d-flex flex-row">
+            <div><div class="contact_info_icon"><img src="./assets/images/message.svg" alt=""></div></div>
+            <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
+          </li>
+          <li class="contact_info_item d-flex flex-row">
+            <div><div class="contact_info_icon"><img src="./assets/images/planet-earth.svg" alt=""></div></div>
+            <div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
+          </li>
+        </ul>
+        <div class="estate_social">
+          <ul class="estate_social_list">
+            <li class="estate_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li class="estate_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="estate_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="estate_social_item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+            <li class="estate_social_item"><a href="#"><i class="fab fa-behance"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 contact_col">
+        <div class="contact_title">about</div>
+        <div class="estate_about_text">
+          <p>Lorem ipsum dolor sit amet, cons ectetur  quis ferme adipiscing elit. Suspen dis se tellus eros, placerat quis ferme ntum et, adipiscingvive rra sit ipsum amet lacus. </p>
+          <p>Nam gravida quis placerat quis fe rme ntum et ferme sadipiscinge te llus semper augue.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Google Map -->
+  
+  <div class="estate_map">
+    <div id="google_map" class="google_map">
+      <div class="map_container">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- footer -->
+<app-footer></app-footer>
+
+
+        
